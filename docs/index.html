@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Temp Converter</title>
+    <meta name="description" content="A temperature converter online!">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+input, label {
+    margin-right: 25%;
+    margin-left: 45%;
+}
+
+p {
+    color: white;
+    margin-right: 25%;
+    margin-left: 45%;
+}
+    </style>
+</head>
+
+<body>
+    <!-- The Form -->
+        <form class="box" id="box">
+            <h1>Temptrature Converter</h1>
+
+            <!-- Fahrenheit to Celsius -->
+            <label>Fahrenheit to Celsius</label>
+            <input id="f2c" type="number" placeholder="0" 
+            oninput="cel(this.value)" 
+            onchange="cel(this.value)">
+            <p>= <span id="ans1"></span>°C</p>
+
+            <!-- Celsius to Fahrenheit -->
+            <label>Celsius to Fahrenheit</label>
+            <input id="c2f" type="number" placeholder="0" 
+            oninput="fah(this.value)" 
+            onchange="fah(this.value)">
+            <p>= <span id="ans2"></span>°F</p>
+
+        </form>
+        <script>
+
+            // Main Functions
+            function fah(num1){
+                let Num = parseFloat(num1);
+                let ans = Num * 9/5 + 32;
+                let ans2 = ans.toFixed(2);
+                document.getElementById("ans2").innerHTML = ans2;
+            };
+            
+            function cel(num1){
+                let Num = parseFloat(num1);
+                let ans = (Num - 32) * 5/9;
+                let ans2 = ans.toFixed(2);
+                document.getElementById("ans1").innerHTML = ans2;
+            };
+            </script>
+        </body>
+</html>
