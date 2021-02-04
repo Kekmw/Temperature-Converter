@@ -7,7 +7,7 @@
     <title>Temp Converter</title>
     <meta name="description" content="A temperature converter online!">
     <style>
-        body {
+body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -26,8 +26,15 @@ input, label {
 
 p {
     color: white;
-    margin-right: 25%;
-    margin-left: 45%;
+    text-align: center;
+}
+
+footer {
+  margin-top: 430px;
+  text-align: center;
+  padding: 3px;
+  background-color: rgb(122, 164, 243);
+  color: white;
 }
     </style>
 </head>
@@ -35,7 +42,7 @@ p {
 <body>
     <!-- The Form -->
         <form class="box" id="box">
-            <h1>Temperature Converter</h1>
+            <h1>Temptrature Converter</h1>
 
             <!-- Fahrenheit to Celsius -->
             <label>Fahrenheit to Celsius</label>
@@ -69,5 +76,8 @@ p {
                 document.getElementById("ans1").innerHTML = ans2;
             };
             </script>
+            <footer>
+                <p>Made by <a href="https://github.com/Kekmw">Kekmw!</a></p>
+              </footer>
         </body>
 </html>
