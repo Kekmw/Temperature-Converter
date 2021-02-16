@@ -7,6 +7,7 @@
     <title>Temperature Converter</title>
     <meta name="description" content="A temperature converter online!">
     <style>
+      
 body {
     margin: 0;
     padding: 0;
@@ -30,11 +31,57 @@ p {
 }
 
 footer {
-  margin-top: 429px;
+  margin-top: 670px;
   text-align: center;
   padding: 3px;
   background-color: rgb(122, 164, 243);
   color: white;
+}
+
+a:link, a:visited, a:hover, a:active{
+    color: #34495e;
+}
+
+.box {
+    width: 350px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box label{
+  color: white;
+  font-weight: 500;
+}
+
+.box input[type = "number"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "number"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
 }
     </style>
 </head>
@@ -45,14 +92,14 @@ footer {
             <h1>Temperature Converter</h1>
 
             <!-- Fahrenheit to Celsius -->
-            <label>Fahrenheit to Celsius</label>
+            <p>Fahrenheit to Celsius</p>
             <input id="f2c" type="number" placeholder="0" 
             oninput="cel(this.value)" 
             onchange="cel(this.value)">
             <p>= <span id="ans1"></span>°C</p>
 
             <!-- Celsius to Fahrenheit -->
-            <label>Celsius to Fahrenheit</label>
+            <p>Celsius to Fahrenheit</p>
             <input id="c2f" type="number" placeholder="0" 
             oninput="fah(this.value)" 
             onchange="fah(this.value)">
@@ -61,20 +108,22 @@ footer {
         </form>
         <script>
 
-            // Main Functions
-            function fah(num1){
+          // Main Functions
+          
+          function fah(num1){
                 let Num = parseFloat(num1);
                 let ans = Num * 9/5 + 32;
-                let ans2 = ans.toFixed(2);
+                let ans2 = Math.round(ans * 100)/100;
                 document.getElementById("ans2").innerHTML = ans2;
             };
-            
-            function cel(num1){
+
+          function cel(num1){
                 let Num = parseFloat(num1);
                 let ans = (Num - 32) * 5/9;
-                let ans2 = ans.toFixed(2);
+                let ans2 = Math.round(ans * 100)/100;
                 document.getElementById("ans1").innerHTML = ans2;
             };
+
             </script>
             <footer>
                 <a href="https://github.com/Kekmw">Made by: Kekmw!</a>
