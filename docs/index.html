@@ -6,86 +6,13 @@
 
     <title>Temperature Converter</title>
     <meta name="description" content="A Temperature Converter Online!">
-    <style>
-      
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #34495e;
-}
 
-h1 {
-    text-align: center;
-    color: white;
-}
-
-input, label {
-    margin-right: 25%;
-    margin-left: 45%;
-}
-
-p {
-    color: white;
-    text-align: center;
-}
-
-footer {
-  margin-top: 670px;
-  text-align: center;
-  padding: 3px;
-  background-color: rgb(122, 164, 243);
-  color: white;
-}
-
-a:link, a:visited, a:hover, a:active{
-    color: #34495e;
-}
-
-.box {
-    width: 350px;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #191919;
-    text-align: center;
-}
-
-.box h1{
-    color: white;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.box label{
-  color: white;
-  font-weight: 500;
-}
-
-.box input[type = "number"]{
-    border: 0;
-    background: none;
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-    border: 2px solid #3498db;
-    padding: 14px 10px;
-    width: 200px;
-    outline: none;
-    color: white;
-    border-radius: 24px;
-    transition: 0.25s;
-}
-
-.box input[type = "number"]:focus{
-    width: 280px;
-    border-color: #2ecc71;
-}
-    </style>
+    <!-- Get's Script from js file. -->
+    <script src="index.js"></script>
+    <!-- Get's Styles from css file. -->
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
-
 <body>
     <!-- The Form -->
         <form class="box" id="box">
@@ -106,25 +33,6 @@ a:link, a:visited, a:hover, a:active{
             <p>= <span id="ans2"></span>°F</p>
 
         </form>
-        <script>
-
-          // Main Functions
-          
-          let fah = num1 => {
-                let Num = parseFloat(num1);
-                let ans = Num * 9/5 + 32;
-                let ans2 = Math.round(ans * 100)/100;
-                document.getElementById("ans2").innerHTML = ans2;
-            };
-
-          let cel = num1 => {
-                let Num = parseFloat(num1);
-                let ans = (Num - 32) * 5/9;
-                let ans2 = Math.round(ans * 100)/100;
-                document.getElementById("ans1").innerHTML = ans2;
-            };
-
-            </script>
             <footer>
                 <a href="https://github.com/Kekmw">Made by: Kekmw!</a>
               </footer>
